@@ -1,0 +1,78 @@
+/* Contenedor de toasts */
+.toast-container {
+  position: fixed; /* Posición fija en la pantalla */
+  bottom: 20px; /* Distancia desde la parte inferior */
+  right: 20px; /* Distancia desde la parte derecha */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+/* Estilos del toast */
+.toast {
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animación de salida */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Aplicar animación de salida */
+.toast-exit {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+/* Tipos de toast */
+.toast-success {
+  background-color: #10b981; /* Verde para éxito */
+  border: 1px solid #059669;
+}
+
+.toast-error {
+  background-color: #ef4444; /* Rojo para error */
+  border: 1px solid #dc2626;
+}
+
+.toast-warning {
+  background-color: #f59e0b; /* Amarillo para advertencia */
+  border: 1px solid #d97706;
+  color: #1e293b; /* Texto oscuro para mejor contraste */
+}
+
+.toast-info {
+  background-color: #3b82f6; /* Azul para información */
+  border: 1px solid #2563eb;
+}
+
+/* Mensaje dentro del toast */
+.toast-message {
+  margin: 0;
+}

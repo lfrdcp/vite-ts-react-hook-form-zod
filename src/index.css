@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --primary-color: #fff; /* Texto blanco */
+  --secondary-color: #333; /* Fondo oscuro */
+  --background-light: #09090b; /* Fondo oscuro */
+  --background-dark: #000; /* Fondo aún más oscuro para ciertas áreas */
+  --border-color: #444; /* Bordes oscuros */
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  background-color: var(--background-light);
+  color: var(--primary-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  padding: 20px;
+}
+
+/* TIPOGRAFÍA */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.875rem;
+}
+
+/* Contenedor principal de la aplicación */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px; /* Espacio por encima del header */
+  padding: 0 20px; /* Márgenes a los lados */
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  background-color: var(--background-light); /* Fondo igual al del root */
+  box-sizing: border-box; /* Asegura que el padding no afecte la altura */
+}
+
+/* Contenido principal de la página */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre los elementos dentro de main */
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para evitar que se expanda demasiado */
+}

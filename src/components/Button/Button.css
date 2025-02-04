@@ -1,0 +1,75 @@
+/* BOTÓN BASE */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+/* Icono dentro del botón */
+.btn-icon {
+  margin: 0 8px; /* Espacio entre el icono y el texto */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* BOTÓN NORMAL */
+.btn.normal {
+  color: var(--secondary-color); /* Texto oscuro */
+  background: var(--primary-color); /* Fondo blanco */
+  border-color: var(--border-color);
+}
+
+.btn.normal:hover {
+  background: rgba(255, 255, 255, 0.85); /* Un blanco apenas más oscuro */
+  color: var(--secondary-color);
+}
+
+.btn.normal:active {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* BOTÓN OUTLINE */
+.btn.outline {
+  color: var(--primary-color);
+  background: transparent;
+  border: 1px solid var(--primary-color);
+}
+
+.btn.outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn.outline:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* BOTÓN CANCEL (ROJO OSCURO) */
+.btn.cancel {
+  color: #fff;
+  background: #8b0000;
+  border: 1px solid #8b0000;
+}
+
+.btn.cancel:hover {
+  background: #a80000;
+}
+
+.btn.cancel:active {
+  background: #6d0000;
+}
+
+/* BOTÓN DISABLED */
+.btn.disabled {
+  background: rgba(255, 255, 255, 0.144); /* Gris claro */
+  color: #6b7280; /* Texto gris oscuro */
+  border: 1px solid #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

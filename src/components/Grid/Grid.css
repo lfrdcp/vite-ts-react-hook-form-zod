@@ -1,0 +1,5 @@
+.grid-container {
+  display: grid;
+  gap: 16px; /* Espacio entre columnas */
+  width: 100%;
+}

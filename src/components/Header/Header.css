@@ -1,0 +1,54 @@
+/* Header styles (Header.css ya lo tienes) */
+
+/* Navbar y su estructura */
+.navbar {
+  position: fixed;
+  top: 10px; /* Agregar margen superior para que no esté pegado al borde */
+  left: 10px;
+  right: 10px;
+  width: calc(100% - 20px);
+  background: #09090b;
+  color: white;
+  z-index: 1000;
+  border: 0.5px solid #4a4b4d;
+  border-radius: 8px;
+  height: 50px; /* Altura del navbar */
+  padding: 10px;
+}
+
+/* Logo y Links en el Header */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffbc00;
+}
