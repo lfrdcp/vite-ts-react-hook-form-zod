@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+# Vite + React + TypeScript + React Hook Form + Zod
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una plantilla que integra Vite, React y TypeScript con React Hook Form para la gestión de formularios y Zod para la validación de esquemas.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite**: Herramienta de construcción rápida para proyectos web modernos.
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **TypeScript**: Superset tipado de JavaScript que mejora la robustez del código.
+- **React Hook Form**: Biblioteca para manejar formularios en React de manera eficiente.
+- **Zod**: Biblioteca de validación de esquemas para TypeScript y JavaScript.
 
-## Expanding the ESLint configuration
+## Requisitos Previos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Node.js**: Asegúrate de tener instalada la versión recomendada de Node.js. Puedes gestionar versiones de Node.js utilizando herramientas como Volta.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/lfrdcp/vite-ts-react-hook-form-zod.git
+   cd vite-ts-react-hook-form-zod
+   ```
+
+2. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+## Scripts Disponibles
+
+- `npm run dev`: Inicia el servidor de desarrollo.
+- `npm run build`: Construye la aplicación para producción.
+- `npm run preview`: Previsualiza la aplicación construida.
+- `npm run lint`: Ejecuta ESLint para analizar el código.
+- `npm run format`: Formatea el código utilizando Prettier.
+
+## Estructura del Proyecto
+
+El proyecto está estructurado de la siguiente manera:
+
+```
+vite-ts-react-hook-form-zod/
+├── src/
+│   ├── components/
+│   ├── hooks/
+│   ├── pages/
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **src/**: Contiene el código fuente de la aplicación.
+  - **components/**: Componentes reutilizables de React.
+  - **hooks/**: Hooks personalizados.
+  - **pages/**: Componentes de página.
+  - **App.tsx**: Componente principal de la aplicación.
+  - **main.tsx**: Punto de entrada de la aplicación.
+- **public/**: Archivos estáticos públicos.
+- **index.html**: Archivo HTML principal.
+- **package.json**: Archivo de configuración de npm.
+- **tsconfig.json**: Configuración de TypeScript.
+- **vite.config.ts**: Configuración de Vite.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Uso de React Hook Form y Zod
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Este proyecto utiliza React Hook Form para la gestión eficiente de formularios y Zod para la validación de esquemas. Puedes encontrar ejemplos de cómo implementar formularios con validación en los componentes dentro de la carpeta `src/components`.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor, abre un issue o envía un pull request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
