@@ -11,16 +11,18 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ label, className, error, options, icon, ...props }, ref) => {
     return (
-      <div className="input-container">
+      <div className="input-container-select">
         {label && (
-          <label htmlFor={props.name} className="input-label">
+          <label htmlFor={props.name} className="input-label-select">
             {label}
           </label>
         )}
-        <div className="input-wrapper">
-          {icon && <span className="icon-left">{icon}</span>}
+        <div className="input-wrapper-select">
+          {icon && <span className="icon-left-select">{icon}</span>}
           <select
-            className={`input-field ${className} ${error ? "input-error" : ""}`}
+            className={`input-field-select ${className} ${
+              error ? "input-error-select" : ""
+            }`}
             style={{
               ...props.style,
               ...(icon ? { paddingLeft: "40px" } : {}),
@@ -38,7 +40,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
             ))}
           </select>
         </div>
-        {error && <span className="error-message">{error}</span>}
+        {error && <span className="error-message-select">{error}</span>}
       </div>
     );
   }

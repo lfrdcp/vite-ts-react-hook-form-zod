@@ -63,6 +63,7 @@ import Select from "./components/Select/Select";
 import ToastContainer, {
   ToastContainerHandle,
 } from "./components/Toast/ToastContainer";
+import { Outlet } from "react-router-dom";
 
 interface FormData {
   email: string;
@@ -167,6 +168,7 @@ function App() {
   return (
     <div className="app-container">
       <Header />
+      <Outlet />
       <main className="main-content">
         <Grid columns={3}>
           <form onSubmit={handleSubmitSelect(onSubmitSelect)}>

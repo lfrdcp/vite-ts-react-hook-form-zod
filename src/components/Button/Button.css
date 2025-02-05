@@ -21,14 +21,13 @@
 
 /* BOTÓN NORMAL */
 .btn.normal {
-  color: var(--secondary-color); /* Texto oscuro */
-  background: var(--primary-color); /* Fondo blanco */
-  border-color: var(--border-color);
+  color: var(--black); /* Texto oscuro */
+  background: var(--white); /* Fondo blanco */
 }
 
 .btn.normal:hover {
   background: rgba(255, 255, 255, 0.85); /* Un blanco apenas más oscuro */
-  color: var(--secondary-color);
+  color: var(--black);
 }
 
 .btn.normal:active {
@@ -37,9 +36,9 @@
 
 /* BOTÓN OUTLINE */
 .btn.outline {
-  color: var(--primary-color);
+  color: var(--white);
   background: transparent;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--white);
 }
 
 .btn.outline:hover {
@@ -52,22 +51,22 @@
 
 /* BOTÓN CANCEL (ROJO OSCURO) */
 .btn.cancel {
-  color: #fff;
-  background: #8b0000;
-  border: 1px solid #8b0000;
+  color: #ffffffcc;
+  background: var(--error);
+  border: 1px solid var(--error);
 }
 
 .btn.cancel:hover {
-  background: #a80000;
+  background: var(--error);
 }
 
 .btn.cancel:active {
-  background: #6d0000;
+  background: var(--error-active);
 }
 
 /* BOTÓN DISABLED */
 .btn.disabled {
-  background: rgba(255, 255, 255, 0.144); /* Gris claro */
+  background: var(--disabled);
   color: #6b7280; /* Texto gris oscuro */
   border: 1px solid #9ca3af;
   cursor: not-allowed;

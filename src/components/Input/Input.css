@@ -9,7 +9,7 @@
 /* Label del input */
 .input-label {
   font-size: 0.875rem;
-  color: var(--primary-color);
+  color: var(--white);
   font-weight: 500;
 }
 
@@ -26,48 +26,46 @@
   width: 100%;
   padding: 10px;
   font-size: 0.875rem;
-  border: 1px solid var(--border-color);
   border-radius: 6px;
-  background: var(--background-light);
-  color: var(--primary-color);
+  border: 1px solid var(--border-dark);
+  color: var(--white);
   outline: none;
   transition: all 0.2s ease-in-out;
 }
 
 /* Cambios aquí para el focus y hover */
 .input-field:focus {
-  border-color: var(--primary-color);
+  border-color: var(--white);
 }
 
 /* Para hover */
 .input-field:hover {
-  border-color: var(--primary-color);
+  border-color: var(--white);
 }
 
 /* Si hay error y el campo tiene foco o está en hover, borde rojo */
 .input-field.input-error:focus,
 .input-field.input-error:hover {
-  border-color: #e74c3c; /* Rojo para error */
+  border-color: var(--border-error); /* Rojo para error */
 }
 
 /* Estilos cuando el campo está deshabilitado */
 .input-field:disabled {
   background: rgba(255, 255, 255, 0.144); /* Casi igual al fondo del sistema */
-  color: var(--secondary-color); /* Un color más tenue */
+  color: var(--black); /* Un color más tenue */
   cursor: not-allowed;
   opacity: 0.8;
-  border-color: var(--border-color);
 }
 
 /* Estilos para cuando hay un error en el campo */
 .input-error {
-  border-color: #e74c3c; /* Rojo para indicar error */
+  border-color: var(--border-error); /* Rojo para indicar error */
 }
 
 /* Mensaje de error */
 .error-message {
   font-size: 0.75rem;
-  color: #e74c3c; /* Rojo para el mensaje de error */
+  color: var(--border-error); /* Rojo para el mensaje de error */
   margin-top: 4px;
 }
 
@@ -85,13 +83,13 @@
 }
 
 /* Línea divisoria para el ícono a la izquierda */
-.icon-left::after {
+.icon-left-select::after {
   content: "";
   position: absolute;
-  right: -12px; /* Posición de la línea respecto al ícono */
+  right: -8px; /* Posición de la línea respecto al ícono */
   top: 50%;
   transform: translateY(-50%);
   width: 1px; /* Grosor de la línea */
   height: 70%; /* Altura de la línea (70% del ícono) */
-  background-color: var(--border-color); /* Color del borde del input */
+  background-color: var(--border-dark); /* Color del borde del select */
 }

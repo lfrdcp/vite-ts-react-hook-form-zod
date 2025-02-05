@@ -15,7 +15,7 @@
 /* Caja del diálogo */
 .alert-dialog {
   background: #09090b;
-  color: var(--primary-color);
+  color: var(--white);
   border-radius: 12px;
   padding: 20px;
   max-width: 400px;

@@ -1,27 +1,30 @@
 import React from "react";
 import "./Header.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="navbar">
       <div className="navbar-container">
-        <h1 className="logo">
-          <img
-            src="/public/img/marvel.png"
-            alt="Marvel Logo"
-            className="logo-img"
-          />
-        </h1>
+        <img
+          src="/public/img/marvel.png"
+          alt="Marvel Logo"
+          className="logo-img"
+          onClick={() => navigate("/")}
+        />
+
         <nav>
           <ul className="nav-links">
             <li>
-              <a href="#">Inicio</a>
+              <Link to="/home">Inicio</Link>
             </li>
             <li>
-              <a href="#">Servicios</a>
+              <Link to="/services">Servicios</Link>
             </li>
             <li>
-              <a href="#">Contacto</a>
+              <Link to="/contact">Contacto</Link>
             </li>
           </ul>
         </nav>

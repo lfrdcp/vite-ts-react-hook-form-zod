@@ -6,19 +6,29 @@
 }
 
 :root {
-  --primary-color: #fff; /* Texto blanco */
-  --secondary-color: #333; /* Fondo oscuro */
-  --background-light: #09090b; /* Fondo oscuro */
-  --background-dark: #000; /* Fondo aún más oscuro para ciertas áreas */
-  --border-color: #444; /* Bordes oscuros */
+  --white: #fff;
+  --black: #333;
+
+  --error: #df080885; /* Rojo oscuro */
+  --error-active: #d33e24be; /* Rojo oscuro */
+
+  --border-error: #df0808; /* Rojo oscuro */
+
+  --disabled: rgba(255, 255, 255, 0.144); /* Gris claro */
+
+  --background-dark: #0e0e0f; /* Fondo aún más oscuro para ciertas áreas */
+
+  --border-dark: #444; /* Bordes oscuros */
+
+  --subtitle-dark: #a0a0a0; /* Subtítulos oscuros */
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: dark;
-  background-color: var(--background-light);
-  color: var(--primary-color);
+  background-color: var(--background-dark);
+  color: var(--white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,8 +43,7 @@ body {
   justify-content: flex-start;
   min-height: 100vh;
   width: 100%;
-  background-color: var(--background-light);
-  color: var(--primary-color);
+  color: var(--white);
   padding: 20px;
 }
 
@@ -46,7 +55,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--white);
 }
 
 h1 {
@@ -76,7 +85,6 @@ h6 {
   margin-top: 60px; /* Espacio por encima del header */
   padding: 0 20px; /* Márgenes a los lados */
   min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
-  background-color: var(--background-light); /* Fondo igual al del root */
   box-sizing: border-box; /* Asegura que el padding no afecte la altura */
 }
 

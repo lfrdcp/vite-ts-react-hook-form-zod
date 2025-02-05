@@ -1,5 +1,5 @@
 /* Contenedor general del select */
-.input-container {
+.input-container-select {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -7,14 +7,14 @@
 }
 
 /* Label del select */
-.input-label {
+.input-label-select {
   font-size: 0.875rem;
-  color: var(--primary-color);
+  color: var(--white);
   font-weight: 500;
 }
 
 /* Contenedor del input y el ícono */
-.input-wrapper {
+.input-wrapper-select {
   display: flex;
   align-items: center;
   position: relative;
@@ -22,57 +22,56 @@
 }
 
 /* Estilos para el select */
-.input-field {
+.input-field-select {
   width: 100%;
   padding: 10px;
   font-size: 0.875rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-dark);
   border-radius: 6px;
-  background: var(--background-light);
-  color: var(--primary-color);
+  color: var(--white);
   outline: none;
   transition: all 0.2s ease-in-out;
 }
 
 /* Cambios aquí para el focus y hover */
-.input-field:focus {
-  border-color: var(--primary-color);
+.input-field-select:focus {
+  border-color: var(--white);
 }
 
 /* Para hover */
-.input-field:hover {
-  border-color: var(--primary-color);
+.input-field-select:hover {
+  border-color: var(--white);
 }
 
 /* Si hay error y el campo tiene foco o está en hover, borde rojo */
-.input-field.input-error:focus,
-.input-field.input-error:hover {
-  border-color: #e74c3c; /* Rojo para error */
+.input-field-select.input-error-select:focus,
+.input-field-select.input-error-select:hover {
+  border-color: var(--border-error); /* Rojo para error */
 }
 
 /* Estilos cuando el campo está deshabilitado */
-.input-field:disabled {
+.input-field-select:disabled {
   background: rgba(255, 255, 255, 0.144); /* Casi igual al fondo del sistema */
-  color: var(--secondary-color); /* Un color más tenue */
+  color: var(--black); /* Un color más tenue */
   cursor: not-allowed;
   opacity: 0.8;
-  border-color: var(--border-color);
+  border-color: var(--border-dark);
 }
 
 /* Estilos para cuando hay un error en el campo */
-.input-error {
-  border-color: #e74c3c; /* Rojo para indicar error */
+.input-error-select {
+  border-color: var(--border-error); /* Rojo para indicar error */
 }
 
 /* Mensaje de error */
-.error-message {
+.error-message-select {
   font-size: 0.75rem;
-  color: #e74c3c; /* Rojo para el mensaje de error */
+  color: var(--border-error); /* Rojo para el mensaje de error */
   margin-top: 4px;
 }
 
 /* Estilos para el ícono */
-.icon-left {
+.icon-left-select {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +84,7 @@
 }
 
 /* Línea divisoria para el ícono a la izquierda */
-.icon-left::after {
+.icon-left-select::after {
   content: "";
   position: absolute;
   right: -8px; /* Posición de la línea respecto al ícono */
@@ -93,5 +92,5 @@
   transform: translateY(-50%);
   width: 1px; /* Grosor de la línea */
   height: 70%; /* Altura de la línea (70% del ícono) */
-  background-color: var(--border-color); /* Color del borde del select */
+  background-color: var(--border-dark); /* Color del borde del select */
 }
